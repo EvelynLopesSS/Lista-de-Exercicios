@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Quantidade de Centenas, Dezenas e Unidades{% endblock %}
+
+{% block content %}
+<div class="container  d-flex justify-content-center align-items-center">
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-success text-white text-center font-weight-bold" style="font-size: 1.2rem;">
+            Quantidade de Centenas, Dezenas e Unidades
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="numero">Digite um número inteiro menor que 1000:</label>
+                    <input type="text" class="form-control" id="numero" name="numero" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+            {% if resultado %}
+            <div class="mt-3">
+                <h4>Resultado:</h4>
+                <p>👉 O número {{ numero }} possui {{ resultado }}.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

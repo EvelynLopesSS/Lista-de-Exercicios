@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Investigação Criminal{% endblock %}
+
+{% block content %}
+<div class="container  d-flex justify-content-center align-items-center">
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-success text-white text-center font-weight-bold" style="font-size: 1.2rem;">
+            Investigação Criminal
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                {% for pergunta in perguntas %}
+                <div class="form-group">
+                    <label>{{ pergunta }}</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="{{ loop.index }}" name="pergunta{{ loop.index }}" value="s">
+                        <label class="form-check-label" for="{{ loop.index }}">Sim</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="{{ loop.index }}_n" name="pergunta{{ loop.index }}" value="n">
+                        <label class="form-check-label" for="{{ loop.index }}_n">Não</label>
+                    </div>
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Analisar</button>
+            </form>
+            {% if classificacao %}
+            <div class="mt-3">
+                <h4>Classificação:</h4>
+                <p>{{ classificacao }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

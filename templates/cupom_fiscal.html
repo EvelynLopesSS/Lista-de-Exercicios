@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Cupom Fiscal{% endblock %}
+
+{% block content %}
+<div class="container  d-flex justify-content-center align-items-center">
+    <div class="card border-primary" style="max-width: 20rem;">
+        <div class="card-header bg-success text-white text-center font-weight-bold" style="font-size: 1.2rem;">
+            Cupom Fiscal
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="tipo_carne">Escolha o tipo de carne:</label>
+                    <select class="form-control" id="tipo_carne" name="tipo_carne">
+                        <option value="1">File Duplo</option>
+                        <option value="2">Alcatra</option>
+                        <option value="3">Picanha</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade (em Kg):</label>
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="cartao_tabajara" name="cartao_tabajara">
+                    <label class="form-check-label" for="cartao_tabajara">Compra realizada com Cartão Tabajara</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+            {% if nota_fiscal %}
+            <div class="mt-3">
+                <h4>Nota Fiscal:</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in nota_fiscal %}
+                        <tr>
+                            <td>{{ item[0] }}</td>
+                            <td>{{ item[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

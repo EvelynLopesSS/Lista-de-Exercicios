@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Exercícios de Programação em Python{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#"><i class="fas fa-list"></i> Lista de Exercícios em Python</a> 
+</nav>
+
+<div class="sidebar">
+    <a href="/"><i class="fas fa-home"></i> Home</a>
+    <a href="{{ url_for('calculadora_notas') }}"><i class="fas fa-calculator"></i> Calculadora de Notas</a>
+    <a href="{{ url_for('cupom_fiscal') }}"><i class="fas fa-receipt"></i> Cupom Fiscal</a>
+    <a href="{{ url_for('folha_pagamento') }}"><i class="fas fa-file-invoice-dollar"></i> Folha de Pagamento</a>
+    <a href="{{ url_for('investigacao_criminal') }}"><i class="fas fa-search"></i> Investigação Criminal</a>
+    <a href="{{ url_for('ordenador_numeros') }}"><i class="fas fa-sort-numeric-up"></i> Ordenador de Números</a>
+    <a href="{{ url_for('quantidade_centenas_dezenas_unidades') }}"><i class="fas fa-sort-amount-up"></i> Quantidade Centenas Dezenas Unidades</a>
+    <a href="{{ url_for('raizes_equacao_segundo_grau') }}"><i class="fas fa-square-root-alt"></i> Raízes da Equação do Segundo Grau</a>
+    <a href="{{ url_for('reajuste_salarial') }}"><i class="fas fa-money-bill-wave"></i> Reajuste Salarial</a>
+</div>
+
+<div class="container centered-container">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

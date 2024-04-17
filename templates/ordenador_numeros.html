@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Ordenador de Números{% endblock %}
+
+{% block content %}
+<div class="container  d-flex justify-content-center align-items-center">
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-success text-white text-center font-weight-bold" style="font-size: 1.2rem;">
+            Ordenador de Números
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="num1">Digite o primeiro número:</label>
+                    <input type="text" class="form-control" id="num1" name="num1" required>
+                </div>
+                <div class="form-group">
+                    <label for="num2">Digite o segundo número:</label>
+                    <input type="text" class="form-control" id="num2" name="num2" required>
+                </div>
+                <div class="form-group">
+                    <label for="num3">Digite o terceiro número:</label>
+                    <input type="text" class="form-control" id="num3" name="num3" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Ordenar</button>
+            </form>
+            {% if numeros_ordenados %}
+            <div class="mt-3">
+                <h4>Números em ordem decrescente:</h4>
+                {% for numero in numeros_ordenados %}
+                <p>🔽 {{ numero }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

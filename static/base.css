@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.container-background{
+    width: 120%;
+    margin-top: -6%;
+    background-color: #fffffff3;
+    background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.6em;
+
+}
+.container-background h3{
+    padding-left:90px; 
+    height: 10px;
+    padding-top: 40px;
+    font-weight:bold ;
+
+}
+
+.container  {
+    margin-top: 10%;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    --s: 194px;
+    --c1: #f6edb3dc;
+    --c2: #acc4a3e5;
+    --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+    --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+    background:
+        var(--_g),var(--_g) 0 calc(var(--s)/2),
+        conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+        conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+        linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+        conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+        linear-gradient(-150deg,var(--_l)) #55897c /* third color here */;
+    background-size: calc(0.866*var(--s)) var(--s);
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: white;
+    padding-top: 50px;
+    color: black;
+    font-size: 15px;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.616);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: rgba(80, 177, 106, 0.658);
+}
+.navbar {
+    background-color: white;
+    color: rgb(118, 121, 116);
+    z-index: 9999; 
+    position: fixed;
+    width: 99%; 
+    
+    
+}
+.navbar-brand {
+    color: rgba(0, 0, 0, 0.616) !important;
+    
+}
+.sidebar i {
+    margin-right: 10px;
+    
+}

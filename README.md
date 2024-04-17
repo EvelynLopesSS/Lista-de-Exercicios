@@ -2,6 +2,8 @@
 
 Este repositório contém uma coleção de exercícios de programação resolvidos em Python.
 
+Você pode realizar os exercíos pelo terminal pelo arquivo [![menu_exercicios.py](https://img.shields.io/badge/menu_exercicios.py-View-green)](menu_exercicios.py)  ou se desejar mais interatividade pode rodar a aplicação Flask pelo arquivo   [![app.py](https://img.shields.io/badge/app.py-View-green)](app.py)
+
 ## Lista de Exercícios
 
 ### 01 - 📊 Média de Notas [![calculadora_notas.py](https://img.shields.io/badge/calculadora__notas.py-View-green)](calculadora_notas.py)
