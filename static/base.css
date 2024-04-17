@@ -5,7 +5,8 @@ html, body {
     overflow: auto;
 }
 .container-background{
-    width: 120%;
+    width: 90%;
+    margin-left: 10%;
     margin-top: -6%;
     background-color: #fffffff3;
     background-image:
@@ -24,6 +25,8 @@ html, body {
 
 .container  {
     margin-top: 10%;
+    margin-left: 8%;
+    width: 90%;
 }
 body::before {
     content: "";
