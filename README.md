@@ -8,7 +8,10 @@ Você pode realizar os exercíos:
 - Se desejar mais interatividade pode rodar a aplicação Flask pelo arquivo   [![app.py](https://img.shields.io/badge/app.py-View-green)](app.py)
   ![image](https://github.com/EvelynLopesSS/Lista-de-Exercicios/assets/113462824/af2c0e79-4a88-4d91-9f3f-1556d9b9f7a5)
 - 📽️ Vídeo de Demonstração:
-https://github.com/EvelynLopesSS/Lista-de-Exercicios/assets/113462824/4b849a93-04d4-4bf0-8e23-d74b0e2e3b02
+
+
+https://github.com/EvelynLopesSS/Lista-de-Exercicios/assets/113462824/c02cc887-1582-49f6-8b31-1d4428156a85
+
 
 ## Lista de Exercícios
 
