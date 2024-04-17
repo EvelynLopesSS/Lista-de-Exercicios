@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<div class="container-background">
+<h3>👇 Escolha o Exercíco que deseja realizar:</h3>
+
+
+  <div class="container">
+    <div class="row my-card-row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-calculator"></i>
+            <h5 class="exercise-title">Calculadora de Notas</h5>
+            <a href="{{ url_for('calculadora_notas') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-file-invoice-dollar"></i>
+            <h5 class="exercise-title">Cupom Fiscal</h5>
+            <a href="{{ url_for('cupom_fiscal') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-money-check-alt"></i>
+            <h5 class="exercise-title">Folha de Pagamento</h5>
+            <a href="{{ url_for('folha_pagamento') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row my-card-row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-user-secret"></i>
+            <h5 class="exercise-title">Investigação Criminal</h5>
+            <a href="{{ url_for('investigacao_criminal') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-sort-numeric-down"></i>
+            <h5 class="exercise-title">Ordenador de Números</h5>
+            <a href="{{ url_for('ordenador_numeros') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-calculator"></i>
+            <h5 class="exercise-title">Quantidade Centenas Dezenas Unidades</h5>
+            <a href="{{ url_for('quantidade_centenas_dezenas_unidades') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row my-card-row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-square-root-alt"></i>
+            <h5 class="exercise-title">Raízes da Equação de Segundo Grau</h5>
+            <a href="{{ url_for('raizes_equacao_segundo_grau') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="icon fas fa-money-bill-wave"></i>
+            <h5 class="exercise-title">Reajuste Salarial</h5>
+            <a href="{{ url_for('reajuste_salarial') }}" class="btn btn-primary">Ir para o Exercício</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+      <div>
+        <h2><strong></strong>📝 Lista de Exercícios</strong></h2>
+        <br><br>
+        <p>
+          <strong>01 - 📊 Média de Notas</strong><br><br>
+        Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar a mensagem:<br><br>
+        
+        <table border="1" style="width: 50%; background-color: #e6ffe6;">
+            <tr>
+                <th style="background-color: #ccffcc;">Média</th>
+                <th style="background-color: #ccffcc;">Situação</th>
+            </tr>
+            <tr>
+                <td>>= 7</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr>
+                <td>&lt; 7</td>
+                <td>Reprovado</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Aprovado com Distinção</td>
+            </tr>
+        </table><br><br>
+        
+        <strong>02 - 🔢 Ordenação de Números</strong><br><br>
+        Faça um Programa que leia três números e mostre-os em ordem decrescente.<br><br>
+        
+        <strong>03 - Reajuste Salarial</strong><br><br>
+        Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:<br><br>
+        <table border="1" style="width: 50%; background-color: #e6ffe6;">
+            <tr>
+                <th style="background-color: #ccffcc;">Faixa Salarial</th>
+                <th style="background-color: #ccffcc;">Aumento</th>
+            </tr>
+            <tr>
+                <td>Até R$ 280,00</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Entre R$ 280,00 e R$ 700,00</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>Entre R$ 700,00 e R$ 1500,00</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Acima de R$ 1500,00</td>
+                <td>5%</td>
+            </tr>
+        </table><br><br>
+        
+        <strong>04 - 💵 Folha de Pagamento</strong><br><br>
+        Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.<br><br>
+        Desconto do IR:<br><br>
+        <table border="1" style="width: 50%; background-color: #e6ffe6;">
+            <tr>
+                <th style="background-color: #ccffcc;">Faixa Salarial</th>
+                <th style="background-color: #ccffcc;">Desconto</th>
+            </tr>
+            <tr>
+                <td>Até R$ 900,00</td>
+                <td>Isento</td>
+            </tr>
+            <tr>
+                <td>Até R$ 1500,00 (inclusive)</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Até R$ 2500,00 (inclusive)</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Acima de R$ 2500,00</td>
+                <td>20%</td>
+            </tr>
+        </table><br><br>
+        
+        Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de horas é 220.<br><br>
+        <table border="1" style="width: 50%; background-color: #e6ffe6;">
+            <tr>
+                <th style="background-color: #ccffcc;">Descrição</th>
+                <th style="background-color: #ccffcc;">Valor</th>
+            </tr>
+            <tr>
+                <td>Salário Bruto</td>
+                <td>R$ 1100,00</td>
+            </tr>
+            <tr>
+                <td>(-) IR (5%)</td>
+                <td>R$ 55,00</td>
+            </tr>
+            <tr>
+                <td>(-) INSS (10%)</td>
+                <td>R$ 110,00</td>
+            </tr>
+            <tr>
+                <td>FGTS (11%)</td>
+                <td>R$ 121,00</td>
+            </tr>
+            <tr>
+                <td>Total de descontos</td>
+                <td>R$ 165,00</td>
+            </tr>
+            <tr>
+                <td>Salário Líquido</td>
+                <td>R$ 935,00</td>
+            </tr>
+        </table><br><br>
+        
+        <strong>05 - 🧮 Raízes de uma Equação do Segundo Grau</strong><br>
+        Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax^2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:<br><br>
+        &#8226;Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve pedir os demais valores, sendo encerrado;<br>
+        &#8226;Se o delta calculado for negativo, a equação não possui raízes reais. Informe ao usuário e encerre o programa;<br>
+        &#8226;Se o delta calculado for igual a zero, a equação possui apenas uma raiz real; informe-a ao usuário;<br>
+        &#8226;Se o delta for positivo, a equação possui duas raízes reais; informe-as ao usuário.<br><br>
+        
+        <strong>06 - 🔢 Quantidade de Centenas, Dezenas e Unidades</strong><br> <br>
+        Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades que ele possui. Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:<br> <br>
+        &#8226;326 = 3 centenas, 2 dezenas e 6 unidades<br>
+        &#8226;12 = 1 dezena e 2 unidades<br>
+        &#8226;Testar com: 326, 300, 100, 320, 310, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1 e 7<br><br>
+        
+        <strong>07 - 🧾 Cupom Fiscal de Compra de Carnes</strong><br> <br>
+        O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:<br>
+        <table border="1" style="width: 50%; background-color: #e6ffe6;">
+            <tr>
+                <th style="background-color: #ccffcc;"></th>
+                <th style="background-color: #ccffcc;">Até 5 Kg</th>
+                <th style="background-color: #ccffcc;">Acima de 5 Kg</th>
+            </tr>
+            <tr>
+                <td>File Duplo</td>
+                <td>R$ 49,00 por Kg</td>
+                <td>R$ 58,00 por Kg</td>
+            </tr>
+            <tr>
+                <td>Alcatra</td>
+                <td>R$ 59,00 por Kg</td>
+                <td>R$ 68,00 por Kg</td>
+            </tr>
+            <tr>
+                <td>Picanha</td>
+                <td>R$ 69,00 por Kg</td>
+                <td>R$ 78,00 por Kg</td>
+            </tr>
+        </table><br> <br>
+        
+        Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se a compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total da compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.<br><br>
+        
+        <strong>08 - 🕵️‍♂️ Investigação Criminal</strong><br> <br>
+        Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+        <br><br>
+        &#8226; "Telefonou para a vítima?"<br>
+        &#8226; "Esteve no local do crime?"<br>
+        &#8226; "Mora perto da vítima?"<br>
+        &#8226;"Devia para a vítima?"<br>
+        &#8226; "Já trabalhou com a vítima?"<br> <br>
+        O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".<br><br>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div> 
+
+  
+
+
+
+{% endblock %}
